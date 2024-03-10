@@ -1,0 +1,364 @@
+@font-face {
+    font-family: font_main_bold;
+    src: url(../../font/main_font_bold.ttf);
+}
+
+#zone_panier {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#zone_panier #disp_panier {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_title_art {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#disp_panier .div_title_art .nbr_prod, #disp_panier .div_title_art .textTitle {
+    margin: auto;
+    color: var(--color-ourson);
+}
+
+#disp_panier .div_title_art .textTitle {
+    font-size: 30px;
+}
+
+#disp_panier .div_title_art .nbr_prod {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+#zone_panier #disp_panier .div_art {
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    margin-top: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#zone_panier #disp_panier .div_art .zoneImgCart {
+    display: flex;
+    width: 30%;
+    height: 150px;
+}
+
+#zone_panier #disp_panier .div_art .zoneImgCart img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+#zone_panier #disp_panier .div_art .zoneText {
+    display: flex;
+    width: 70%;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_del_name {
+    width: 50%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_del_name p {
+    font-size: 30px;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_del_name button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    left: 0;
+    bottom: 1vw;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_del_name button i {
+    color: red;
+    font-size: 30px;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_p_c {
+    width: 50%;
+    position: relative;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_p_c .price_art {
+    position: absolute;
+    font-size: 20px;
+    top: 0.5vw;
+    right: 2vw;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_p_c .zone_count {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 1vw;
+    right: 2vw;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_count p {
+    font-size: 20px;
+    width:30px;
+    text-align: center;
+    margin: auto;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_count button {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--color-ourson);
+    border-color: transparent;
+}
+
+#zone_panier #disp_panier .div_art .zoneText .zone_count button i {
+    margin: auto;
+    color: white;
+}
+
+#zone_panier #disp_total {
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+#zone_panier #disp_total .title_total {
+    color: var(--color-ourson);
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+#zone_panier #disp_total .div_total {
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#zone_panier #disp_total .div_total .priceTotPanier {
+    display: flex;
+    position: relative;
+    height: 50px;
+}
+
+#zone_panier #disp_total .div_total .priceTotPanier .namePanier {
+    position: absolute;
+    left: 1vw;
+    font-size: 25px;
+}
+
+#zone_panier #disp_total .priceTotPanier .pricePanier {
+    position: absolute;
+    right: 1vw;
+    font-size: 25px;
+}
+
+#zone_panier #disp_total .div_total .trait {
+    height: 2px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-ourson);
+    margin-bottom: 20px;
+}
+
+#zone_panier #disp_total .div_total .lineRetrait {
+    display: flex;
+    position: relative;
+}
+
+#zone_panier #disp_total .div_total .lineRetrait i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#zone_panier #disp_total .div_total .lineRetrait p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#zone_panier #disp_total .div_total .lineRetrait .dispoRet {
+    position: absolute;
+    right: 10px;
+}
+
+#zone_panier #disp_total .div_total .lineRetrait .indispo {
+    color: red;
+}
+
+#zone_panier #disp_total .div_total .lineRetrait .dispo {
+    color: green;
+}
+
+#zone_panier #disp_total .div_total .linePriceTva {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#zone_panier #disp_total .div_total .linePriceTva .txt_tva {
+    font-family: font_main_bold;
+    font-size: 20px;
+}
+
+#zone_panier #disp_total .div_total .linePriceTva .ttc {
+    font-size: 15px;
+    color: lightslategrey;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+#zone_panier #disp_total .div_total .linePriceTva .totalPrice {
+    font-family: font_main_bold;
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#zone_panier #disp_total .div_total button {
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    border-color: black;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition-duration: 0.3s;
+}
+
+#zone_panier #disp_total .div_total button:hover {
+    background-color: var(--color-ourson);
+    color: white;
+    transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 1050px) and (min-width: 750px) {
+    #zone_panier #disp_total .div_total .lineRetrait p {
+        font-size: 1.5vw;
+    }
+
+    #zone_panier #disp_total .div_total .linePriceTva .txt_tva, #zone_panier #disp_total .div_total .linePriceTva .totalPrice {
+        font-size: 1.7vw;
+    }
+
+    #zone_panier #disp_total .div_total .linePriceTva .ttc {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 750px) and (min-width: 550px) {
+    #zone_panier {
+        flex-direction: column;
+    }
+
+    #zone_panier #disp_panier {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_del_name p {
+        font-size: 25px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_p_c .price_art {
+        font-size: 20px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_del_name button i {
+        font-size: 25px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_count p {
+        font-size: 20px;
+        width:25px;
+    }
+
+    #zone_panier #disp_total {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    #zone_panier #disp_total .div_total .lineRetrait p, #zone_panier #disp_total .div_total .lineRetrait i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #zone_panier {
+        flex-direction: column;
+    }
+
+    #zone_panier #disp_panier {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneImgCart {
+        height: 100px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_del_name p {
+        font-size: 20px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_p_c .price_art {
+        font-size: 15px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_del_name button i {
+        font-size: 20px;
+    }
+
+    #zone_panier #disp_panier .div_art .zoneText .zone_count p {
+        font-size: 15px;
+        width:20px;
+    }
+
+    #zone_panier #disp_total {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    #zone_panier #disp_total .div_total button {
+        font-size: 13px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,426 @@
+:root {
+    --color-ourson: rgb(201, 152, 15);
+    --color-back-o: rgba(245, 222, 120, 0.4);
+}
+
+#panierContent {
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    overflow: auto;
+}
+
+#back_black_panier {
+    position: fixed;
+    z-index: 1;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#panierContent .croix_quit {
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform .2s;
+}
+
+#panierContent h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#panierContent #list_panier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#panierContent #list_panier .divArtPan {
+    position: relative;
+    height: auto;
+    border: 2px solid var(--color-ourson);
+    border-radius: 20px;
+    display: flex;
+    margin-top: auto;
+}
+
+#panierContent #list_panier .divArtPan .zoneImgCart {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+#panierContent #list_panier .divArtPan .zoneImgCart img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#panierContent #list_panier .divArtPan .div_count {
+    position: absolute;
+    display: flex;
+}
+
+#panierContent #list_panier .divArtPan .del_pan_button {
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform .2s;
+}
+
+#panierContent #list_panier .divArtPan .del_pan_button i {
+    color: var(--color-ourson);
+}
+
+#panierContent #list_panier .divArtPan .div_count button:active {
+    transform: scale(1.1);
+    transition-duration: 0.15s;
+}
+
+.zone_panier {
+    position: relative;
+}
+
+.zone_panier .divTot {
+    position: relative;
+}
+
+.divTot .priceTot {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.divTot .buyButton {
+    background-color: var(--color-ourson);
+    border-color: transparent;
+    transition-duration: 0.3s;
+}
+
+.divTot .buyButton:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+@media screen and (min-width: 850px) {
+    #panierContent {
+        top:0;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+        padding: 5vw;
+    }
+
+    #panierContent .croix_quit {
+        right: 2vw;
+        top: 2vw;
+    }
+
+    #panierContent .croix_quit i {
+        font-size: 4vw;
+    }
+
+    #panierContent h2 {
+        margin-bottom: 40px;
+        font-size: 4vw;
+    }
+
+    #panierContent #list_panier .divArtPan {
+        width: 100%;
+        margin-bottom: 2vw;
+        padding: 0.5vw;
+    }
+
+    #panierContent .div_info {
+        font-size: 1.2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .zoneImgCart {
+        width: 30%;
+        height: 7vw;
+        margin-left: 0.7vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count {
+        right: 2vw;
+        bottom: 1.2vw;
+        font-size: 1.2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count p{
+        padding-left: 1vw;
+        padding-right: 1vw;
+        margin: auto;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count button {
+        display: flex;
+        background-color: rgba(201, 152, 15, 0.6);
+        border-color: transparent;
+        border-radius: 10px;
+        padding: 0.5vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count button i {
+        margin: auto;
+        font-size: 1vw;
+        font-weight: 600;
+    }
+
+    #panierContent #list_panier .divArtPan .del_pan_button {
+        right: 1.5vw;
+        top: 1vw;
+    }
+
+    #panierContent #list_panier .divArtPan .del_pan_button i {
+        font-size: 1.5vw;
+    }
+
+    #panierContent #list_panier .divArtPan .name_item_pan, #panierContent #list_panier .divArtPan .price_item_pan {
+        margin-left: 1vw;
+        margin-top:1vw;
+    }
+
+    #panierContent #list_panier .emptyCart {
+        margin-top: 5vw;
+        font-size: 2vw;
+    }
+
+    #panierContent #list_panier .emptyImg {
+        padding-top: 4vw;
+        width: 100%;
+    }
+
+    .divTot .priceTot {
+        font-size: 1.2vw;
+        padding: 1vw;
+    }
+
+    .divTot .buyButton {
+        font-size: 1.5vw;
+        padding: 1vw;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 650px) {
+    #panierContent {
+        top:0;
+        left: 20%;
+        bottom: 0;
+        width: 60%;
+        padding-top: 30px;
+    }
+
+    #panierContent .croix_quit {
+        right: 3vw;
+        top: 3vw;
+    }
+
+    #panierContent .croix_quit i {
+        font-size: 5vw;
+    }
+
+    #panierContent h2 {
+        margin-bottom: 30px;
+        font-size: 5vw;
+    }
+
+    #panierContent #list_panier .divArtPan {
+        width: 90%;
+        margin-bottom: 2vw;
+        padding: 0.5vw;
+    }
+
+    #panierContent #list_panier .divArtPan .zoneImgCart {
+        width: 30%;
+        height: 16vw;
+        margin-left: 1.2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count {
+        right: 3vw;
+        bottom: 2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count p{
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        font-size: 2vw;
+        margin: auto;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count button {
+        display: flex;
+        background-color: rgba(201, 152, 15, 0.6);
+        border-color: transparent;
+        border-radius: 10px;
+        padding: 1vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count button i {
+        margin: auto;
+        font-size: 2vw;
+        font-weight: 600;
+    }
+
+    #panierContent #list_panier .divArtPan .del_pan_button {
+        right: 3vw;
+        top: 2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .del_pan_button i {
+        font-size: 3vw;
+    }
+
+    #panierContent #list_panier .divArtPan .name_item_pan {
+        margin-left: 2.5vw;
+        margin-top:3vw;
+        font-size: 2.5vw;
+    }
+
+    #panierContent #list_panier .divArtPan .price_item_pan {
+        margin-left: 2.5vw;
+        margin-top: 4vw;
+        font-size: 3vw;
+        font-family: font_main_reg;
+    }
+
+    #panierContent #list_panier .emptyCart {
+        margin-top: 6vw;
+        font-size: 3vw;
+    }
+
+    #panierContent #list_panier .emptyImg {
+        padding-top: 4vw;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .divTot .priceTot {
+        font-size: 2vw;
+        padding: 2vw;
+    }
+
+    .divTot .buyButton {
+        font-size: 2.5vw;
+        padding: 2vw;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #panierContent {
+        top:0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    #panierContent .croix_quit {
+        right: 5vw;
+        top: 5vw;
+    }
+
+    #panierContent .croix_quit i {
+        font-size: 7vw;
+    }
+
+    #panierContent h2 {
+        margin-bottom: 30px;
+        font-size: 7vw;
+    }
+
+    #panierContent #list_panier .divArtPan {
+        width: 80%;
+        margin-bottom: 4vw;
+        padding: 1vw;
+    }
+
+    #panierContent #list_panier .divArtPan .zoneImgCart {
+        width: 25%;
+        height: 25vw;
+        margin-left: 1.2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count {
+        right: 5vw;
+        bottom: 4vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count p{
+        padding-left: 3vw;
+        padding-right: 3vw;
+        font-size: 4vw;
+        margin: auto;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count button {
+        display: flex;
+        background-color: rgba(201, 152, 15, 0.6);
+        border-color: transparent;
+        border-radius: 10px;
+        padding: 2vw;
+    }
+
+    #panierContent #list_panier .divArtPan .div_count button i {
+        margin: auto;
+        font-size: 3vw;
+        font-weight: 600;
+    }
+
+    #panierContent #list_panier .divArtPan .del_pan_button {
+        right: 4.5vw;
+        top: 4vw;
+    }
+
+    #panierContent #list_panier .divArtPan .del_pan_button i {
+        font-size: 5vw;
+    }
+
+    #panierContent #list_panier .divArtPan .name_item_pan {
+        margin-left: 4vw;
+        margin-top:5vw;
+        font-size: 4vw;
+    }
+
+    #panierContent #list_panier .divArtPan .price_item_pan {
+        margin-left: 4vw;
+        margin-top: 5.5vw;
+        font-size: 5vw;
+        font-family: font_main_reg;
+    }
+
+    #panierContent #list_panier .emptyCart {
+        margin-top: 9vw;
+        font-size: 5vw;
+    }
+
+    #panierContent #list_panier .emptyImg {
+        padding-top: 5vw;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .divTot .priceTot {
+        font-size: 4vw;
+        padding: 4vw;
+    }
+
+    .divTot .buyButton {
+        font-size: 5vw;
+        padding: 4vw;
+        border-radius: 30px;
+    }
+}
+
+#panierContent #list_panier .divArtPan .del_pan_button:hover, #panierContent .croix_quit:hover  {
+    transform: scale(1.1);
+}

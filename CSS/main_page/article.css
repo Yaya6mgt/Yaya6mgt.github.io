@@ -1,0 +1,268 @@
+#choice_article {
+    position: fixed;
+    padding-top: 3vw;
+    z-index: 2;
+    overflow: auto;
+    background-color: white;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+#back_black_art {
+    position: fixed;
+    z-index: 1;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#choice_article .all_zone_art {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#choice_article .close_art {
+    position: absolute;
+    display: flex;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 4vw;
+    right: 2vw;
+    top: 2vw;
+}
+
+.zoneImgArt {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: auto;
+
+}
+
+.zoneImgArt img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.trait {
+    height: 4px;
+    width: 80%;
+    margin-top: 2vw;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-ourson);
+}
+
+#choice_article .zoneNameArt {
+    display: flex;
+    margin-top: 3vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+#choice_article .zoneNameArt .art_name {
+    font-size: 3vw;
+    width: 70%;
+}
+
+#choice_article .zoneNameArt .zonePriPan {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#choice_article .zoneNameArt .zonePriPan .art_price {
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+#choice_article .zoneNameArt .zonePriPan button {
+    background-color: white;
+    border: 3px solid var(--color-ourson);
+    color: var(--color-ourson);
+    font-size: 1.4vw;
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 0.3s;
+}
+
+.art_t_description {
+    font-family: font_main_bold;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    width: auto;
+    margin-top: 2vw;
+    font-size: 2.1vw;
+    text-align: center;
+}
+
+.trait_desc {
+    height: 3px;
+    width: 60%;
+    margin-top: 2vw;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-ourson);
+}
+
+.art_description {
+    font-family: font_main_reg;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    width: auto;
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.art_made {
+    font-family: font_main_reg;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 4vw;
+    width: auto;
+    margin-top: 3vw;
+}
+
+#choice_article .zoneNameArt .zonePriPan button:hover {
+    background-color: rgba(201, 152, 15, 0.3);
+    transition-duration: 0.3s;
+}
+
+#choice_article .zoneNameArt .zonePriPan button:active {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.3s;
+}
+
+@media screen and (min-width: 850px) {
+    .zoneImgArt {
+        height: 25vw;
+        min-height: 400px;
+    }
+
+    #choice_article .zoneNameArt .art_name {
+        font-size: 40px;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan .art_price {
+        font-size: 40px;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan button {
+        padding: 30px;
+        border-radius: 25px;
+    }
+
+    .art_description, .art_made {
+        font-size: 25px;
+        margin-bottom: 100px;
+    }
+
+    .art_t_description {
+        font-size: 50px;
+        margin-top: 100px;
+    }
+
+    .trait_desc {
+        margin-bottom: 75px;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 650px){
+    .zoneImgArt {
+        height: 15vw;
+        min-height: 300px;
+    }
+
+    #choice_article .zoneNameArt .art_name {
+        font-size: 40px;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan .art_price {
+        font-size: 40px;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan button {
+        padding: 30px;
+        border-radius: 25px;
+    }
+
+    .art_description, .art_made {
+        font-size: 25px;
+        margin-bottom: 100px;
+    }
+
+    .art_t_description {
+        font-size: 50px;
+        margin-top: 100px;
+    }
+
+    .trait_desc {
+        margin-bottom: 75px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .zoneImgArt {
+        height: 8vw;
+        min-height: 200px;
+    }
+
+    #choice_article .zoneNameArt {
+        flex-direction: column;
+        margin-top: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #choice_article .zoneNameArt .art_name {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan .art_price {
+        font-size: 20px;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan {
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+    }
+
+    #choice_article .zoneNameArt .zonePriPan button {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 50px;
+    }
+
+    .art_description, .art_made {
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+    .art_t_description {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .trait_desc {
+        margin-bottom: 35px;
+    }
+
+}

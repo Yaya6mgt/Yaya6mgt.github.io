@@ -1,0 +1,5 @@
+defaults:
+  - scope:
+      path: ""
+    values:
+      main: "main_page.html"
