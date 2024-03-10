@@ -1,0 +1,82 @@
+#coordonne {
+    width: 40%;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    margin:auto;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+#coordonne h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#coordonne .ele_form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+#coordonne label {
+    text-align: center;
+}
+
+#coordonne .zone_all_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#coordonne .zone_all_name div {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+#coordonne button {
+    margin: auto;
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 650px) {
+    #coordonne {
+        min-width: 400px;
+     }
+}
+
+@media screen and (max-width: 650px) {
+    #coordonne {
+        width: auto;
+        margin-top: 50px;
+        box-shadow: none;
+    }
+
+    #coordonne h2 {
+        margin-bottom: 30px;
+    }
+
+    #coordonne .ele_form {
+        font-size: 15px;
+    }
+
+    #coordonne .zone_all_name {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #coordonne .zone_all_name div {
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+}

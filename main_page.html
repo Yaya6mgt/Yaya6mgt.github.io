@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon/logo_site.ico" type="image/x-icon">
+    <link href="CSS/main_page/header.css" rel="stylesheet">
+    <link href="CSS/main_page/shop.css" rel="stylesheet">
+    <link href="CSS/main_page/list_article.css" rel="stylesheet">
+    <link href="CSS/main_page/panier.css" rel="stylesheet">
+    <link href="CSS/main_page/article.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="JS/main_page.js"></script>
+    <title>ContrePluche</title>
+</head>
+<body>
+    <header>
+        <div class="zone_title">
+            <img id="logo_site" src="./image/logo_site.png" alt="logo du site">
+            <h1>ContrePluche</h1>
+        </div>
+
+        <div class="zone_panier" onclick="togglePanier()">
+                <img id="logo_panier" src="image/logo_panier.png" alt="logo panier">
+                <p>Mon panier</p>
+        </div>
+    </header>
+
+    <div id="panierContent" style="display: none;">
+        <button class="croix_quit" onclick="closePanier()"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Mon Panier</h2>
+        <div id="list_panier"></div>
+    </div>
+    <div id="back_black_panier" style="display: none;" onclick="closePanier()"></div>
+
+    <div class="back-image"></div>
+    <nav>
+        <h2>Bienvenue dans notre univers douillet de peluches ContrePluche!</h2>
+
+        <div class="text_pre">
+            <p id="long_text">Plongez dans la tendresse et la douceur avec notre collection exquise de peluches d'animaux,
+                conçues pour égayer chaque instant de votre vie. De l'ourson câlin à l'éléphant majestueux, chaque peluche est soigneusement sélectionnée pour vous offrir une compagnie affectueuse.</p>
+            <p>Adoptez la peluche parfaite dès aujourd'hui et laissez la magie opérer !</p>
+        </div>
+    </nav>
+
+    <div class="div_search">
+        <div class="zone_search">
+            <input type="text" id="searchInput" placeholder="Rechercher un produit" oninput="searchProducts()">
+            <button onclick="openWithSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="zone_suggestion">
+            <ul id="sugSearch"></ul>
+        </div>
+        <script>closeSugg()</script>
+    </div>
+    <div id="article_bdd"></div>
+    <script>displayAllArt()</script>
+    <div id="choice_article" style="display: none;"></div>
+    <div id="back_black_art" style="display: none;" onclick="closeArticle()"></div>
+</body>
+</html>
