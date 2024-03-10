@@ -2,4 +2,4 @@ defaults:
   - scope:
       path: ""
     values:
-      main: "nomdevotrepage.html"
+      main: "main_page.html"
