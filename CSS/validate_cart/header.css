@@ -1,0 +1,110 @@
+:root {
+    --color-ourson: rgb(201, 152, 15);
+    --color-back-o: rgba(245, 222, 120, 0.4);
+}
+
+@font-face {
+    font-family: font_title;
+    src: url(../../font/Bubblegum.ttf);
+}
+
+@font-face {
+    font-family: font_main_reg;
+    src: url(../../font/main_font_reg.ttf);
+}
+
+@font-face {
+    font-family: font_main_bold;
+    src: url(../../font/main_font_bold.ttf);
+}
+
+* {
+    margin: 0;
+    font-family: font_main_reg;
+}
+
+header {
+    display: flex;
+    width: auto;
+    padding-left: 8vw;
+    padding-top: 1vw;
+}
+
+header #logo_site {
+    height: 6vw;
+    min-height: 70px;
+}
+
+header .step_panier {
+    width: auto;
+    margin: auto;
+    display: flex;
+}
+
+header .step_panier .text_step {
+    display: flex;
+    border-radius: 50%;
+    height: 4vw;
+    min-height: 40px;
+    width: 4vw;
+    min-width: 40px;
+}
+
+header .step {
+    display: flex;
+    margin: auto;
+}
+
+header .step p {
+    margin: auto;
+    font-size: x-large;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header .step .trait {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 4px;
+    width: 15vw;
+    max-width: 200px;
+}
+
+header .step_panier .first_step .text_step {
+    color: var(--color-ourson);
+    border: 3px solid var(--color-ourson);
+}
+
+header .step_panier .first_step .trait {
+    background-color: var(--color-ourson);
+}
+
+header .step_panier .second_step .text_step {
+    color: var(--color-back-o);
+    border: 2px solid var(--color-back-o);
+}
+
+header .step_panier .second_step .trait {
+    background-color: var(--color-back-o);
+}
+
+.sepa {
+    background-color: var(--color-ourson);
+    height: 3px;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-direction: column;
+    }
+
+    header #logo_site {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
